@@ -53,27 +53,52 @@ export const createCultivo = async (req, res) => {
     return res.status(400).send({ message: "Content cannot be empty" });
   }
   try {
-    const newCultivo = new Cultivo({
+    const newCultivo = new Cultivo({ 
       cul_name_go: req.body.cul_name_go,
       cul_cientifico_name_go: req.body.cul_cientifico_name_go,
       cul_categoria_go: req.body.cul_categoria_go,
-      cul_como_cultivar_go: {
-        cul_maceta_tamano_go: req.body.cul_maceta_tamano_go,
-        cul_suelo_tipo_go: req.body.cul_suelo_tipo_go,
-        cul_termico_piso_go: req.body.cul_termico_piso_go,
-        cul_max_temp_go: req.body.cul_max_temp_go,
-        cul_min_temp_go: req.body.cul_min_temp_go,
-        cul_riego_cantidad_go: req.body.cul_riego_cantidad_go,
-        cul_solar_luz_go: req.body.cul_solar_luz_go,
-        cul_maxima_altura_go: req.body.cul_maxima_altura_go,
-        cul_sembrar_profundidad_go: req.body.cul_sembrar_profundidad_go,
-        cul_planta_separacion_go: req.body.cul_planta_separacion_go,
-      },
-      cul_fertilizante_go: req.body.cul_fertilizante_go,
       cul_icon_go: req.body.cul_icon_go,
-      cul_description_go: req.body.cul_description_go
-        ? req.body.cul_description_go
-        : "Sin descripcion",
+      cul_banner_go: req.body.cul_banner_go,
+      cul_description_go: req.body.cul_description_go,
+      cul_info_nutricional_go: {
+        cul_beneficios_go: req.body.cul_info_nutricional_go.cul_info_nutricional_go,
+        cul_cantidad_go: req.body.cul_info_nutricional_go.cul_cantidad_go,
+        cul_calorias_go: req.body.cul_info_nutricional_go.cul_calorias_go,
+        cul_grasas_totales_go: req.body.cul_info_nutricional_go.cul_grasas_totales_go,
+        cul_colesterol_go: req.body.cul_info_nutricional_go.cul_colesterol_go,
+        cul_sodio_go: req.body.cul_info_nutricional_go.cul_sodio_go,
+        cul_potasio_go: req.body.cul_info_nutricional_go.cul_potasio_go,
+        cul_carbohidratos_go: req.body.cul_info_nutricional_go.cul_carbohidratos_go,
+        cul_azucares_go: req.body.cul_info_nutricional_go.cul_azucares_go,
+        cul_proteinas_go: req.body.cul_info_nutricional_go.cul_proteinas_go,
+        cul_vitmin_go: req.body.cul_info_nutricional_go.cul_vitmin_go,
+      },
+      cul_cuando_cultivar_go: {
+        cul_germina_en_go: req.body.cul_cuando_cultivar_go.cul_germina_en_go,
+        cul_cosechar_en_go: req.body.cul_cuando_cultivar_go.cul_cosechar_en_go,
+        cul_temporada_siembra_go: req.body.cul_cuando_cultivar_go.cul_temporada_siembra_go,
+      },
+      cul_como_cultivar_go: {
+        cul_tamano_maceta_go: req.body.cul_como_cultivar_go.cul_tamano_maceta_go,
+        cul_transplantar_go: req.body.cul_como_cultivar_go.cul_transplantar_go,
+        cul_plantar_casa_go: req.body.cul_como_cultivar_go.cul_plantar_casa_go,
+        cul_termico_piso_go: req.body.cul_como_cultivar_go.cul_termico_piso_go,
+        cul_max_temp_go: req.body.cul_como_cultivar_go.cul_max_temp_go,
+        cul_min_temp_go: req.body.cul_como_cultivar_go.cul_min_temp_go,
+        cul_riego_cantidad_go: req.body.cul_como_cultivar_go.cul_riego_cantidad_go,
+        cul_solar_luz_go: req.body.cul_como_cultivar_go.cul_solar_luz_go,
+        cul_maxima_altura_go: req.body.cul_como_cultivar_go.cul_maxima_altura_go,
+        cul_sembrar_profundidad_go: req.body.cul_como_cultivar_go.cul_sembrar_profundidad_go,
+        cul_planta_separacion_go: req.body.cul_como_cultivar_go.cul_planta_separacion_go,
+        cul_suelo_tipo_go: req.body.cul_como_cultivar_go.cul_suelo_tipo_go,
+        cul_ph_suelo_go: req.body.cul_como_cultivar_go.cul_ph_suelo_go,
+        cul_tipo_luna: req.body.cul_como_cultivar_go.cul_tipo_luna,
+      },
+      cul_buenos_vecinos_go: req.body.cul_buenos_vecinos_go,
+      cul_malos_vecinos_go: req.body.cul_malos_vecinos_go,
+      cul_fertelizantes_go: req.body.cul_fertelizantes_go,
+      cul_plagas_comunes: req.body.cul_plagas_comunes,
+      cul_metodo_reproduccion_go: req.body.cul_metodo_reproduccion_go,
     });
     const cultivoSaved = await newCultivo.save();
     res.json(cultivoSaved);
