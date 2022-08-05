@@ -96,7 +96,8 @@ const cultivoSchema = new Schema(
     cul_plagas_comunes_go: [Schema.Types.Mixed],
     cul_metodo_reproduccion_go: [Schema.Types.Mixed],
     cul_publicidad_go: [Schema.Types.Mixed],
-    cul_archivos_go: [Schema.Types.Mixed]
+    cul_archivos_go: [Schema.Types.Mixed],
+    cul_comentarios_go: [Schema.Types.Mixed]
   },
   {
     versionKey: false,

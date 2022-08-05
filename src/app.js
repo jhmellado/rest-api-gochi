@@ -6,6 +6,7 @@ import indexRoutes from "./routes/index.routes";
 import cultivosRoutes from "./routes/cultivos.routes";
 import categoriacultivosRoutes from "./routes/categoriacultivos.routes";
 import usuariosRoutes from "./routes/usuarios.routes";
+import recopilacionesRoutes from "./routes/recopilaciones.routes";
 
 const app = express();
 
@@ -24,5 +25,6 @@ app.use("/",indexRoutes)
 app.use("/cultivos/",cultivosRoutes);
 app.use("/categorias/",categoriacultivosRoutes);
 app.use("/usuarios/",usuariosRoutes);
+app.use("/recopilations/",recopilacionesRoutes);
 
 export default app;

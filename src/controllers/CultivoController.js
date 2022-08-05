@@ -192,6 +192,7 @@ export const createCultivo = async (req, res) => {
       cul_metodo_reproduccion_go: req.body.cul_metodo_reproduccion_go,
       cul_publicidad_go: req.body.cul_publicidad_go,
       cul_archivos_go: req.body.cul_archivos_go,
+      cul_comentarios_go: req.body.cul_comentarios_go
     });
     const cultivoSaved = await newCultivo.save();
     res.json(cultivoSaved);
