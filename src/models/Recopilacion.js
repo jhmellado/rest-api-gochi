@@ -4,6 +4,7 @@ import mongoosePaginate from "mongoose-paginate-v2";
 const recopilacionSchema = new Schema(
   {
     reco_name_go: String,
+    reco_imagen_go: String,
     reco_category_go: [Schema.Types.Mixed],
     reco_about_go: String,
     reco_description_go: String,

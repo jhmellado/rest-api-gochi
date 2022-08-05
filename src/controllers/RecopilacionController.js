@@ -40,6 +40,7 @@ export const createRecopilacion = async (req, res) => {
   try {
     const newRecopilacion = new Recopilacion({
       reco_name_go: req.body.reco_name_go,
+      reco_imagen_go: req.body.reco_imagen_go,
       reco_category_go: req.body.reco_category_go,
       reco_about_go: req.body.reco_about_go,
       reco_description_go: req.body.reco_description_go,
