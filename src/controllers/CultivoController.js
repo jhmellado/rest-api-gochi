@@ -165,6 +165,8 @@ export const createCultivo = async (req, res) => {
       cul_como_cultivar_go: {
         cul_tamano_maceta_go:
           req.body.cul_como_cultivar_go.cul_tamano_maceta_go,
+        cul_espacio_maceta_go:
+          req.body.cul_como_cultivar_go.cul_espacio_maceta_go,
         cul_transplantar_go: req.body.cul_como_cultivar_go.cul_transplantar_go,
         cul_plantar_casa_go: req.body.cul_como_cultivar_go.cul_plantar_casa_go,
         cul_termico_piso_go: req.body.cul_como_cultivar_go.cul_termico_piso_go,
@@ -189,7 +191,7 @@ export const createCultivo = async (req, res) => {
       cul_plagas_comunes_go: req.body.cul_plagas_comunes_go,
       cul_metodo_reproduccion_go: req.body.cul_metodo_reproduccion_go,
       cul_publicidad_go: req.body.cul_publicidad_go,
-      cul_archivos_go: req.body.cul_archivos_go
+      cul_archivos_go: req.body.cul_archivos_go,
     });
     const cultivoSaved = await newCultivo.save();
     res.json(cultivoSaved);

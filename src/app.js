@@ -5,6 +5,7 @@ import cors from 'cors';
 import indexRoutes from "./routes/index.routes";
 import cultivosRoutes from "./routes/cultivos.routes";
 import categoriacultivosRoutes from "./routes/categoriacultivos.routes";
+import usuariosRoutes from "./routes/usuarios.routes";
 
 const app = express();
 
@@ -22,5 +23,6 @@ app.use(express.json());
 app.use("/",indexRoutes)
 app.use("/cultivos/",cultivosRoutes);
 app.use("/categorias/",categoriacultivosRoutes);
+app.use("/usuarios/",usuariosRoutes);
 
 export default app;

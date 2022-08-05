@@ -75,6 +75,7 @@ const cultivoSchema = new Schema(
     },
     cul_como_cultivar_go: {
       cul_tamano_maceta_go: String,
+      cul_espacio_maceta_go: String,
       cul_transplantar_go: String,
       cul_plantar_casa_go: String,
       cul_termico_piso_go: String,
