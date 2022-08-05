@@ -5,7 +5,7 @@ const router = Router();
 
 router.get('/', cultivoController.findAllCultivos);
 
-router.get('/Frutal',cultivoController.findAllFrutalCategory);
+router.get('/Frutales',cultivoController.findAllFrutalCategory);
 
 router.get('/:id',cultivoController.findOneCultivo);
 
