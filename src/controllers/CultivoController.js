@@ -43,6 +43,61 @@ export const findAllFrutalCategory = async (req, res) => {
   }
 };
 
+export const findAllVegetalCategory = async (req, res) => {
+  try {
+    const allFrutal = await Cultivo.find({ cul_categoria_go: "Vegetales" });
+    res.json(allFrutal);
+  } catch (error) {
+    res.status(500).json({
+      message: error.message || "Something goes wrong",
+    });
+  }
+};
+
+export const findAllEspeciasCategory = async (req, res) => {
+  try {
+    const allFrutal = await Cultivo.find({ cul_categoria_go: "Especias" });
+    res.json(allFrutal);
+  } catch (error) {
+    res.status(500).json({
+      message: error.message || "Something goes wrong",
+    });
+  }
+};
+
+export const findAllFloralesCategory = async (req, res) => {
+  try {
+    const allFrutal = await Cultivo.find({ cul_categoria_go: "Florales" });
+    res.json(allFrutal);
+  } catch (error) {
+    res.status(500).json({
+      message: error.message || "Something goes wrong",
+    });
+  }
+};
+
+export const findAllAromaticasCategory = async (req, res) => {
+  try {
+    const allFrutal = await Cultivo.find({ cul_categoria_go: "Aromaticas" });
+    res.json(allFrutal);
+  } catch (error) {
+    res.status(500).json({
+      message: error.message || "Something goes wrong",
+    });
+  }
+};
+
+export const findAllSuculentasCategory = async (req, res) => {
+  try {
+    const allFrutal = await Cultivo.find({ cul_categoria_go: "Suculentas" });
+    res.json(allFrutal);
+  } catch (error) {
+    res.status(500).json({
+      message: error.message || "Something goes wrong",
+    });
+  }
+};
+
 //POST
 export const createCultivo = async (req, res) => {
   if (!req.body.cul_name_go) {

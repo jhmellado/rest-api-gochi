@@ -7,6 +7,16 @@ router.get('/', cultivoController.findAllCultivos);
 
 router.get('/Frutales',cultivoController.findAllFrutalCategory);
 
+router.get('/Vegetales',cultivoController.findAllVegetalCategory);
+
+router.get('/Florales',cultivoController.findAllFloralesCategory);
+
+router.get('/Especias',cultivoController.findAllEspeciasCategory);
+
+router.get('/Aromaticas',cultivoController.findAllAromaticasCategory);
+
+router.get('/Suculentas',cultivoController.findAllSuculentasCategory);
+
 router.get('/:id',cultivoController.findOneCultivo);
 
 router.post('/', cultivoController.createCultivo);
